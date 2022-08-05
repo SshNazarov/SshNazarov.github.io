@@ -1,0 +1,239 @@
+body{
+    font-family: Arial, sans-serif;
+}
+
+nav{
+    widows: 100%;
+    height: 60px;
+    background: #344051;
+}
+
+.logo{
+    float: left;
+    color: #fff;
+    font-size: 28px;
+    line-height: 60px;
+    padding-left: 388px;
+    
+}
+
+.menu{
+    float: left;
+    padding-left: 428px;
+}
+
+.menu li{
+    float: left;
+    font-size: 16px;
+    color: #fff;
+    line-height: 60px;
+    margin-right: 40px;
+    text-transform: uppercase;
+    
+}
+
+.menu li a: visited{
+    color: white;
+    
+}
+
+.main{
+    width: 100%;
+    height: calc(100% - 60px);
+    background: url(../img/boy.png) 90% 100%/auto 85% no-repeat , url(../img/bg.jpg) center/cover no-repeat;
+    
+}
+
+.title__cntainer{
+    float: left;
+    margin: 404px 0px 0px 432px;
+    color: #2c384a;
+    text-align: center;
+}
+
+.title__cntainer h1{
+    font-size: 55px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.title__cntainer h4{
+    color: #76828f;
+    margin-top: 30px;
+    font-size: 22px;
+    
+}
+
+.title__cntainer input{
+    width: 96px;
+    height: 40px;
+    text-align: center;
+    border: 2px solid #697784;
+    background: none;
+    border-radius: 5px;
+    color: #697784;
+    font-size: 13px;
+    cursor: pointer;
+    margin: 50px 14px 0px 14px 0px;
+    
+}
+
+.about_me_container h2{
+    text-align: center;
+    width: 100px;
+    font-size: 23px;
+    margin-left: 800px;
+    margin: 40px auto;
+    padding-bottom: 10px;
+}
+
+.about_me_container{
+    width: 740px;
+    margin: 0 auto;
+} 
+
+.about_me_container img{
+    margin: 40px auto;
+    display: block;
+    margin: 35px auto;
+} 
+
+.about_me_container p{
+    margin-top: 35px;
+}
+
+.about_me_container hr{
+    height: 4px;
+    border: none;
+    background: #ea7800;
+    width: 60px;
+    margin: 0px auto;
+}
+
+.skills_container h2{
+    text-align: center;
+    width: 200px;
+    font-size: 23px;
+    margin: 40px auto;
+    padding-bottom: 10px;
+}
+
+.skills_container hr{
+    height: 4px;
+    border: none;
+    background: #ea7800;
+    width: 60px;
+    margin: 0px auto;
+}
+
+
+
+.skills_container{
+    width: 950px;
+    margin: 0px auto;
+
+}
+
+.skills_item{
+    float: left;
+    width: 232px;
+    text-align: center;    
+}
+
+.clear{
+    clear: left;
+}
+
+.keyses_container h2{
+    text-align: center;
+    width: 200px;
+    font-size: 23px;
+    margin: 40px auto;
+    padding-bottom: 10px;
+}
+
+.keyses_container hr{
+    height: 4px;
+    border: none;
+    background: #ea7800;
+    width: 60px;
+    margin: 0px auto;
+}
+
+.keyses_container img{
+    
+    margin: 40px auto;
+    display: block;
+    margin: 35px auto;
+}
+
+.keyses_container span p{
+    margin: 20px;
+    text-align: center;
+}
+
+.description_left{
+    margin: 10px 250px 10px 270px;
+    
+}
+
+.description_left h3{
+    margin: 10px;
+}
+
+.description_left p{
+    margin: 10px 0px 10px 10px;
+}
+
+
+.description_left a{
+    margin: 10px 10px 10px 10px;
+}
+
+
+.description_right h3{
+    text-align: left;
+    margin: -148px 250px 10px 500px;
+}
+
+.description_right p{
+    margin: 10px 250px 10px 500px;
+}
+
+
+.Cost_calculation{
+    font-size: 23px;
+    margin: 220px 500px 220px 500px;
+}
+
+.Cost_calculation_container h2{
+    text-align: center;
+    width: 400px;
+    font-size: 33px;
+    margin: 20px auto;
+    padding-bottom: 10px;
+}
+
+.Cost_calculation_container h3{
+    text-align: left: ;
+    width: 400px;
+    font-size: 23px;
+    margin: 10px auto 10px 40px;
+    padding-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
