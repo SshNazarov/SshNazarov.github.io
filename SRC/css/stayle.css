@@ -1,0 +1,799 @@
+@font-face {
+	font-family: 'Franklin_Gothic';
+	src: url('../fonts/framd.eot');
+	src: local('☺'), url('../fonts/framd.woff') format('woff'), url('../fonts/framd.ttf') format('truetype'), url('../fonts/framd.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+body{
+    font-family: Franklin_Gothic, Arial, sans-serif;
+ /* background: #777;
+    */
+}
+
+
+nav{
+    width: 100%;
+    height: 60px;
+    background: #344051;
+    position: fixed;
+    z-index: 3;        
+    opacity: 0.98;        /*немного прозрачности)*/
+}
+
+.loading{
+    font-size: 0px;        /*загрузка находится в loadstayle.min_________добавлено чтобы скрыть после loadig*/
+} 
+
+.logo{                    /*Андрей Браун в лого*/
+    float: left;
+    color: #fff;
+    font-size: 28px;
+    line-height: 60px;
+    -webkit-animation: comming 2.5s;    /*анимация появлениe А. Браун*/
+    -o-animation: comming 2.5s;
+    animation: comming 2.5s;
+    font-family: 'Franklin_Gothic';
+}
+
+@keyframes comming{
+    0%{
+        opacity: 0.01;
+    }
+    100%{
+        
+        opacity: 1;
+    }
+}
+
+
+  
+main{
+    width: 100%;
+    height: 100%;
+}
+
+.menu{
+    float: left;
+    
+}
+
+.menu li{
+    float: left;
+    font-size: 14px;
+    color: white;
+    line-height: 60px;
+    margin-right: 40px;
+    text-transform: uppercase;    /*uppercase заглавные*/
+    -webkit-animation: topmenu 0.6s ease forwards;
+    -o-animation: topmenu 0.6s ease forwards;
+    animation: topmenu 0.6s ease forwards;     /*анимация появления кнопок меню*/
+    opacity: 0;
+}
+
+.menu li:nth-child(2){            /*последовательность появл. кнопок меню*/
+    animation-delay: 0.4s;
+}
+
+.menu li:nth-child(3){
+    animation-delay: 0.6s;
+}
+
+.menu li:nth-child(4){
+    animation-delay: 0.8s;
+}
+
+.menu li:nth-child(5){
+    animation-delay: 1s;
+}
+
+.menu li:nth-child(6){
+    animation-delay: 1.2s;
+}
+
+@keyframes topmenu{   /*анимация появления кнопок меню*/
+    0%{
+        opacity: 0;
+        margin-top: -20px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+.menu li a{ /*после посищения ссылки в меню :visited не помгоает*/
+    color: white;
+    text-decoration: none;
+    font-family: 'Franklin_Gothic';
+}
+
+.menu li a:hover{    /*наведение на ссылки меню*/
+    transition: all 0.3s;
+    color: #ea7800;
+    transform: scale(1.1);
+    display: inline-block;
+}
+
+.menu li a:active{    /*нажатие на ссылки меню- - - - - - - - -- --*/
+    transform: scale(1.2);
+    color: gold;
+    transition: all 0.1s;
+}
+
+
+.main{
+    width: 100%;
+    height: 100%;
+    background: url(../img/boy.png) 90% 100%/auto 85% no-repeat, url(../img/bg.jpg) center/cover no-repeat;
+    
+}
+.title__container{
+    float: left;
+    color: #2c384a;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    -webkit-animation: HI 1.3s ease forwards;
+    -o-animation: HI 1.3s ease forwards;
+    animation: HI 1.3s ease forwards;
+    -webkit-animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+@keyframes HI{
+    0%{
+        opacity: 0;
+        margin-left:  -170px;
+    }
+    100%{
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+
+
+.title__container h1{
+    font-size: 72px;
+    font-weight: bold;
+    font-family: 'Franklin_Gothic';
+    
+}
+
+.title__container h4{
+    color: #79818d;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 22px;
+    font-family: 'Franklin_Gothic';
+}
+
+.title__container input{          /*КНОПКИ*/
+    width: 96px;
+    height: 40px;
+    text-align: center;
+    border: 2px solid #6d7682;
+    background: none;
+    border-radius: 5px;
+    color: #6d7682;
+    font-size: 13px;
+    cursor: pointer;
+    margin: 50px 14px 0px 14px;
+    font-family: 'Franklin_Gothic';
+    
+}
+
+.title__container input{            /*imputs center*/
+    transition: all 0.2s;
+    
+}
+
+.title__container input:hover{      /*imputs center*/  
+    background: #344051;
+    color: white;
+}
+
+.title__container input:active{    /*imputs center*/
+    transform: scale(1.06);
+    transition: all 0.1s;
+}
+
+.white-btn:visited{
+    color: white;
+}
+
+@media (max-width: 992px){
+    .title__container, .title__container h4, .title__container input{
+        color:white;
+        position: relative;
+        z-index: 2;
+    }
+    .title__container input{
+        border: 2px solid #fff;
+    }
+    .main{
+        position: relative;
+    }
+    .main::after{
+        content: "";
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        background: rgba(0,0,0,0.4);
+    }
+}
+
+
+
+
+.about_me_container h2{
+    font-size: 33px;
+    margin: 110px auto 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Franklin_Gothic';
+}
+
+.about_me_container hr{
+    height: 4px;
+    border: none;
+    background: #d17700;
+    width: 70px;
+    margin: 0 auto 60px;
+    opacity: 1;
+}
+
+.about_me_container p{
+    margin-top: 24px;
+    font-size: 16px;
+    font-family: 'Calibri';
+}
+
+.about_me_container .secondText{
+    margin-top: 45px;
+}
+
+.about_me_container{
+    
+    padding-bottom: 100px;
+}
+
+.about_me_container a{
+    display: block;
+    width: 160px;
+    height: 33px;
+    font-family: 'Franklin_Gothic';
+    border: 1px solid black;
+    border-radius: 8px;
+    line-height: 30px;
+    margin: none;
+    font-size: 16px;
+    background: url(../img/input.png) 6%/auto no-repeat;
+    padding-left: 18px;
+    color: #6f707f;
+    opacity: 1;
+    text-decoration: none;
+}
+
+.about_me_container a:hover{  /*скач резюме анимация*/
+    color: black;
+    transform: scale(1.06);
+    transition: all 0.4s;
+}
+
+.about_me_container a:active{
+    transform: scale(1.1);
+    transition: all 0.1s;
+}
+
+
+
+.about_me_container img{
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+
+.skills{
+    background: url(../img/bg2.jpg) center/cover no-repeat;
+    background-attachment: fixed;                            /*паралакс скилов решил тож добавить*/
+
+}
+
+.skills_container h2{
+    font-size: 33px;
+    margin: 110px auto 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Franklin_Gothic';
+}
+
+@media (max-width: 403px){
+    .skills_container h2{
+        font-size: 26px;
+    }
+}
+
+.skills_container hr{
+    height: 4px;
+    border: none;
+    background: #d17700;
+    width: 70px;
+    margin: 0 auto 60px;
+    opacity: 1;
+    
+}
+
+
+.skills_item:hover{         /*плавное увеличение скилов*/
+    transform: scale(1.06);
+    transition: all 0.3s;
+}
+
+.skills_item img{
+    margin-bottom: 20px;
+    height: 40px;
+}
+.skills_item h3{
+    font-size: 19px;
+    color: #cf7600;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-family: 'Bahnschrift';
+}
+.skills_item p{
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Calibri';
+}
+.skills_item{
+    float: left;
+    width: 200px;
+    text-align: center;
+    margin: 0 56px 60px;
+}
+
+
+.portfolio_container h2{
+    font-size: 33px;
+    margin: 60px auto 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Franklin_Gothic';
+    
+}
+.portfolio_container hr{
+    height: 4px;
+    border: none;
+    background: #d17700;
+    width: 70px;
+    margin: 0 auto 60px;
+    opacity: 1;
+    
+}
+.portfolio_subscription{
+    font-size: 16px;
+    margin-bottom: 40px;
+    font-family: 'Calibri';
+}
+.portfolio_container img{
+ 
+    margin-bottom: 40px;
+}
+
+.description_left h3{
+    font-size: 25px;
+    font-family: 'Franklin_Gothic';
+    
+}
+.description_left p{
+    font-size: 17px;
+    margin: 16px 0;
+    font-family: 'Calibri';
+}
+
+.description_left a{
+    margin-top: 25px;
+    display: block;
+    width: 100%;
+    background: #63b5ae;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+        text-decoration: none;
+    font-family: 'Calibri';
+}
+
+.description_left a:hover{            /*портфолио ссылка*/
+    transform: scale(1.06);
+    transition: 0.2s;
+}
+
+.description_left a:active{
+    transition: all 0.01s;
+    background: #4c8681;
+}
+
+
+.description_right h4{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-family: 'Franklin_Gothic';
+}
+.description_right p{
+    font-size: 20px;
+    font-family: 'Calibri';
+}
+.portfolio{
+    padding-top: 40px;
+    padding-bottom: 128px;
+}
+
+
+
+.calculator{
+    padding-bottom: 84px;
+    
+}
+.calculator_container{                /*save- --- --*/
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    margin: 0 auto;
+    padding-top: 74px;
+    
+}
+
+
+
+.calculator_container h2{
+     text-align: center;
+    
+    font-size: 43px;
+    margin: 0px auto 50px;
+    
+}
+.calculator_inner{
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.calculator_inner h3{
+    font-size: 29px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    
+}
+.calculator_inner select{
+    margin-bottom: 44px;
+    
+}
+
+.calculator_inner hr{
+    height: 2px;
+    border: none;
+    background: #eee;
+    width: 100%;
+    margin: 0 auto 24px;
+}
+
+.mySelect{
+    height: 54px;
+    background: #eeeeee;
+    padding-left: 24px;
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    background:  url(../img/select.png) 98% 54%/auto no-repeat, #efefef;
+}
+
+
+.days, .price{
+    font-size: 28px;
+    
+}
+.calculator_footer .digit{
+    font-size: 28px;
+}
+
+
+
+.statistic{                    /*save- -- ---- ------*/
+    background: url(../img/bg3.jpg) center/cover no-repeat;
+    background-attachment: fixed;                              /*паралакс*/
+}
+
+.statistic_container{
+    
+    padding-bottom: 100px;
+    
+}
+
+
+.statistic_container h2{
+    font-size: 33px;
+    margin: 0px auto 30px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    padding-top: 100px;
+}
+
+.statistic_container hr{
+    height: 4px;
+    border: none;
+    background: #d17700;
+    width: 70px;
+    margin: 0 auto 90px;
+    opacity: 1;
+}
+
+.statistic_item{
+    display: inline-block;
+    width: 210px;
+    text-align: center;
+    margin: 0 46px 0px;
+}
+
+.statistic_item img{
+    height: 54px;
+}
+
+.statistic_item h3{
+    font-size: 35px;
+    font-weight: 800;
+    margin: 34px 0;
+}
+
+.statistic_item p{
+    font-size: 17px;
+    text-transform: uppercase;
+    font-family: 'Calibri';
+}
+
+.margin-right{
+    
+}
+
+.statistic_item:hover{
+    transform: scale(1.06);
+    transition: all 0.8s;
+}
+
+.reviews_container{
+    margin-top: 110px;
+    margin: 0 auto;
+    padding-bottom: 140px;
+}
+
+.reviews_container h2{
+     font-size: 33px;
+    margin: 0px auto 30px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    padding-top: 100px;
+}
+
+.reviews_container hr{
+    height: 4px;
+    border: none;
+    background: #d17700;
+    width: 70px;
+    margin: 0 auto 70px;
+    opacity: 1;
+}
+
+.review img{
+    padding-bottom: 36px;
+}
+
+.review{                        /*-------------*/
+    text-align: center;
+}
+
+.review_text{
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 36px;
+    font-family: 'Calibri';
+}
+
+.review_author{
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Calibri';
+}
+
+.review_author span{
+    font-weight: 800;
+}
+
+
+.contacts{
+    background: url(../img/bg4.jpg) center/cover no-repeat;
+    color: white;
+}
+
+.contacts_container h2{
+    font-size: 33px;
+    margin: 0px auto 30px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    padding-top: 100px;
+}
+
+.contacts_container hr{
+    height: 4px;
+    border: none;
+    background: #d17700;
+    width: 70px;
+    margin: 0 auto 70px;
+    opacity: 1;
+}
+
+
+.contacts_container{
+    margin: 0 auto;
+    padding-bottom: 68px;
+}
+
+.contacts_subscription{
+    font-size: 16px;
+    margin-bottom: 48px;
+    font-family: 'Calibri';
+}
+
+.contacts_data_item{
+    float: left;
+    width: 175px;
+    text-align: center;
+    margin: 0 45px;
+    font-family: 'Calibri';
+    
+}
+
+.contacts_data_item:hover{
+    transition: all 0.1s;
+    transform: scale(1.05);
+}
+
+.contacts_data_item img{
+    height: 24px;
+    margin-bottom: 16px;   
+}
+
+.contacts_data_item p{
+    font-size: 16px;
+    font-family: 'Franklin_Gothic';
+}
+
+.contacts_container h3{
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 46px;
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+.contacts_inputs input{        /*--------*/
+    width: 352px;
+    float: center;
+    height: 34px;
+    padding-left: 14px;
+    margin-bottom: 14px;
+    background: rgba(210, 214, 220, 0.93);
+    font-size: 16px;
+}
+
+.contacts_inputs input:focus{                        /*выделение полей ввода данных*/
+    border: 2px solid rgb(210, 214, 220, 0.7);
+    box-shadow: 0px 0px 5px rgba(210, 214, 220, 0.7);
+}
+
+@media (max-width: 768px){
+    .contacts_inputs input{
+        width: 100%;
+    }
+}
+
+
+.contacts_container textarea{
+    width: 95%;
+    height: 160px;
+    resize: none;
+    padding-top: 10px;
+    padding-left: 15px;
+    background: rgba(220, 224, 230, 0.93);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.contacts_container textarea:focus{            /*выделение полей ввода данных33332222332233432233433323333*/
+    
+    box-shadow: 0px 0px 7px rgba(210, 214, 220, 1);
+}
+
+
+
+.contacts_container input[type="submit"]{
+    display: block;
+    margin: 0 auto;
+    background: none;
+    color: white;
+    border: 2px solid white;
+    height: 46px;
+    width: 124px;
+    border-radius: 8px;
+    font-size: 20px;
+    margin-bottom: 76px;
+}
+
+.contacts_container input[type="submit"]:hover{        /*анимация кнопоки..*/
+    transform: scale(1.05);
+    transition: all 0.2s;
+}
+
+.contacts_container input[type="submit"]:active{        /*анимация кнопоки..*/
+    transform: scale(1);
+    transition: all 0s;
+}
+
+.contacts_social a{
+    display: block;
+    float: left;
+    margin: 0 5%;
+    
+}
+.contacts_social a:hover{
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+
+.contacts_social img{
+    height: 30px;
+}
+
+.map img{
+    display: block;
+    width: 100%;
+    height: 350px;
+    margin-bottom: 0px;
+}
+.footer{
+    background: #354051;
+    height: 94px;
+}
+.footer_container{
+    text-align: center;
+    line-height: 94px;
+    color: white;
+    font-family: 'Arial';
+}
+
+
+/*
+
+
+.footer{
+    background: #354051;
+    height: 94px;
+}
+
+.footer_container{
+    text-align: center;
+    line-height: 94px;
+    color: white;
+}
+*/
