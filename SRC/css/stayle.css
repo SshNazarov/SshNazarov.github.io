@@ -104,7 +104,11 @@ main{
     }
 }
 
-.menu li a{ /*после посищения ссылки в меню :visited не помгоает*/
+.menu li a.active{
+    color: gold;
+}
+
+.menu li a { /*после посищения ссылки в меню :visited не помгоает*/
     color: white;
     text-decoration: none;
     font-family: 'Franklin_Gothic';
@@ -117,7 +121,7 @@ main{
     display: inline-block;
 }
 
-.menu li a:active{    /*нажатие на ссылки меню- - - - - - - - -- --*/
+.menu li a:active{    /*нажатие на ссылки меню*/
     transform: scale(1.2);
     color: gold;
     transition: all 0.1s;
@@ -361,6 +365,22 @@ main{
     margin: 0 56px 60px;
 }
 
+.carousel-control-prev{
+    width: 60px;
+    
+}
+
+.carousel-indicators{
+     bottom: -50px;
+}
+.animat{
+    opacity: 0;
+}
+
+.animat.show-animation{
+    opacity: 1;
+    transition: opacity 2s;
+}
 
 .portfolio_container h2{
     font-size: 33px;
@@ -556,7 +576,18 @@ main{
     font-weight: 800;
     margin: 34px 0;
 }
+/*----------попытка сделать бегающие цифры-------*/
+/*
+.number{
+    opacity: 0.2;
+}
 
+.viz{
+    opacity: 1;
+    transition: 1s;
+}
+*/
+/*-----------------*/
 .statistic_item p{
     font-size: 17px;
     text-transform: uppercase;
@@ -573,7 +604,6 @@ main{
 }
 
 .reviews_container{
-    margin-top: 110px;
     margin: 0 auto;
     padding-bottom: 140px;
 }
