@@ -104,7 +104,7 @@ $(document).ready(function(){
             modalToggle = document.getElementById('toggleMyModal'); 
             myModal.show(modalToggle);
 
-        }, 1000);
+        }, 5000);
 });
     
     
