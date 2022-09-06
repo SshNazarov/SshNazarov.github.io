@@ -31,7 +31,7 @@ $(document).ready(function(){
     calculate();
     
     
-//    выделение кнопок меню
+//    выделение кнопок меню и ссылки
     $(window).scroll(() => {
         let scrollDistance = $(window).scrollTop();
         
@@ -64,8 +64,47 @@ $(document).ready(function(){
     });
     };
     
-  
+  //счетчик цифр статистики 
     
+  let optionsStat = {
+            threshold: [0.5]
+        };
+        let observerStat = new IntersectionObserver(onEntryStat, optionsStat);
+        let elementsStat = $('.statAnimation');
+
+        elementsStat.each((i, el) => {
+            observerStat.observe(el);
+        });
+
+
+        function onEntryStat(entry) {
+            entry.forEach(change => {
+                if (change.isIntersecting) {
+                    if(!$('.statAnimation').hasClass("done")){
+                        $('.statAnimation').addClass("done");
+                        $('.statAnimation').spincrement({
+                         thousandSeparator: "",
+                         duration: 2200
+                    });
+                  }
+                }
+            });
+        }
+    
+    //Модальные окна в кейсах
+    $('.image-link').magnificPopup({
+        type: 'image'
+    });
+    
+    //Модальное окно акции по таймеру
+        setTimeout(function () {
+           const myModal = new bootstrap.Modal('#myModal', {
+                keyboard: false
+            });
+            modalToggle = document.getElementById('toggleMyModal'); 
+            myModal.show(modalToggle);
+
+        }, 1000);
 });
     
-
+    
